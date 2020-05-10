@@ -1,10 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
 
 export default function App() {
+  const windowHeight = useWindowDimensions().height;
+  const windowWidth = useWindowDimensions().width;
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Button title='Fixing stuff' onPress={() => alert('is it fixed yet?')} />
     </View>
   );
 }
